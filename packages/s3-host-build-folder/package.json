@@ -1,6 +1,6 @@
 {
   "name": "@cdk-recipes/s3-host-build-folder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "tsc",
     "deploy": "npm run build && cdk deploy"
@@ -17,5 +17,8 @@
     "@aws-cdk/core": "*",
     "@aws-cdk/aws-s3-deployment": "*",
     "source-map-support": "^0.5.16"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
