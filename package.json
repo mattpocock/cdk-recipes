@@ -11,5 +11,8 @@
   },
   "scripts": {
     "s3": "yarn workspace @cdk-recipes/s3-host-build-folder"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.9.2"
   }
 }
