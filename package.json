@@ -1,0 +1,15 @@
+{
+  "name": "cdk-repices",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "s3": "yarn workspace @cdk-recipes/s3-host-build-folder"
+  }
+}
