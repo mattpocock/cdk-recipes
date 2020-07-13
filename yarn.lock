@@ -100,6 +100,18 @@
     "@aws-cdk/core" "1.51.0"
     constructs "^3.0.2"
 
+"@aws-cdk/aws-cognito@*":
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-cognito/-/aws-cognito-1.51.0.tgz#f9f74ad10e496a14e73a6142f8826d177cd0e190"
+  integrity sha512-DSKDO0dC6/EQL5d1ZECA14Hi+B1RM74FzU4SARIldPfm3RurK0FvMe/RNAfUzF/aQR+3jEyTHPkoRn27M+/ScA==
+  dependencies:
+    "@aws-cdk/aws-certificatemanager" "1.51.0"
+    "@aws-cdk/aws-iam" "1.51.0"
+    "@aws-cdk/aws-lambda" "1.51.0"
+    "@aws-cdk/core" "1.51.0"
+    "@aws-cdk/custom-resources" "1.51.0"
+    constructs "^3.0.2"
+
 "@aws-cdk/aws-ec2@1.51.0":
   version "1.51.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.51.0.tgz#7609d18b9a0fbc1fee6b6fbefe30095149ed0018"
@@ -164,7 +176,7 @@
     "@aws-cdk/core" "1.51.0"
     constructs "^3.0.2"
 
-"@aws-cdk/aws-iam@1.51.0":
+"@aws-cdk/aws-iam@*", "@aws-cdk/aws-iam@1.51.0":
   version "1.51.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.51.0.tgz#a2fa86dd9f96e49deb8ce7e662edc1fc996ae0f7"
   integrity sha512-s7VwKeeZds0z86yV1vmm/zDCFLnop+67AcEu9QMncluR5yPy+GL2lDjVs2e5py8D3Wmv0XOObbieu4+r9+lKYw==
@@ -182,7 +194,7 @@
     "@aws-cdk/core" "1.51.0"
     constructs "^3.0.2"
 
-"@aws-cdk/aws-lambda@1.51.0":
+"@aws-cdk/aws-lambda@*", "@aws-cdk/aws-lambda@1.51.0":
   version "1.51.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-lambda/-/aws-lambda-1.51.0.tgz#e4d6e6f4764b177322bae333dac3c2561e84c8e9"
   integrity sha512-cWKdSFmbrCUgyRwfKKLsJH8xCnPVmpjvPWbEglcBlKWg4f8UlsRk2wd2Lw2HlDjb+Pntj4cJpj578ZS2XPBEQA==

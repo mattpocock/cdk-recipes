@@ -1,0 +1,25 @@
+{
+  "name": "@cdk-recipes/simple-cognito",
+  "version": "0.2.2",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "npm run build && cdk deploy",
+    "prepublishOnly": "npm run build"
+  },
+  "main": "lib/index.js",
+  "devDependencies": {
+    "@types/node": "10.17.5",
+    "aws-cdk": "*",
+    "ts-node": "^8.1.0",
+    "typescript": "~3.7.2"
+  },
+  "dependencies": {
+    "@aws-cdk/core": "*",
+    "@aws-cdk/aws-iam": "*",
+    "@aws-cdk/aws-cognito": "*",
+    "source-map-support": "^0.5.16"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
