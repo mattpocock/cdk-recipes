@@ -1,6 +1,6 @@
 {
   "name": "@cdk-recipes/github-amplify",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "build": "tsc",
     "deploy": "npm run build && cdk deploy",
