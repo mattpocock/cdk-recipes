@@ -1,5 +1,5 @@
 {
-  "name": "@cdk-recipes/simple-cognito",
+  "name": "@cdk-recipes/cron-lambda",
   "version": "0.2.3",
   "scripts": {
     "build": "tsc",
@@ -15,8 +15,9 @@
   },
   "dependencies": {
     "@aws-cdk/core": "*",
-    "@aws-cdk/aws-iam": "*",
-    "@aws-cdk/aws-cognito": "*",
+    "@aws-cdk/aws-lambda": "*",
+    "@aws-cdk/aws-events": "*",
+    "@aws-cdk/aws-events-targets": "*",
     "source-map-support": "^0.5.16"
   },
   "publishConfig": {

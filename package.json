@@ -12,7 +12,8 @@
   "scripts": {
     "s3": "yarn workspace @cdk-recipes/s3-host-build-folder",
     "ga": "yarn workspace @cdk-recipes/github-amplify",
-    "c": "yarn workspace @cdk-recipes/simple-cognito"
+    "c": "yarn workspace @cdk-recipes/simple-cognito",
+    "cron": "yarn workspace @cdk-recipes/cron-lambda"
   },
   "dependencies": {
     "@changesets/cli": "^2.9.2"
