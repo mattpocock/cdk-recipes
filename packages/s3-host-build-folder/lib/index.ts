@@ -12,6 +12,7 @@ interface Props {
     s3Deploy.BucketDeploymentProps,
     "sources" | "destinationBucket"
   >;
+  uniqueId: string;
 }
 
 export class S3HostBuildFolderNestedStack extends cdk.NestedStack {
@@ -24,23 +25,27 @@ export class S3HostBuildFolderNestedStack extends cdk.NestedStack {
   ) {
     super(scope, id, props);
 
-    this.bucket = new s3.Bucket(this, `HostingBucket`, {
+    this.bucket = new s3.Bucket(this, `${props.uniqueId}HostingBucket`, {
       publicReadAccess: true,
       ...props.bucketProps,
       websiteIndexDocument: props.websiteIndexDocument,
       websiteErrorDocument: props.websiteErrorDocument,
     });
 
-    this.deployment = new s3Deploy.BucketDeployment(this, `BucketDeployment`, {
-      ...props.deploymentProps,
-      destinationBucket: this.bucket,
-      sources: [s3Deploy.Source.asset(props.buildFolder)],
-    });
+    this.deployment = new s3Deploy.BucketDeployment(
+      this,
+      `${props.uniqueId}BucketDeployment`,
+      {
+        ...props.deploymentProps,
+        destinationBucket: this.bucket,
+        sources: [s3Deploy.Source.asset(props.buildFolder)],
+      },
+    );
 
-    new cdk.CfnOutput(this, "BucketWebsiteURL", {
+    new cdk.CfnOutput(this, `${props.uniqueId}BucketWebsiteURL`, {
       value: this.bucket.bucketWebsiteUrl,
       description: "The public URL of the hosted website",
-      exportName: "BucketWebsiteUrl",
+      exportName: `${props.uniqueId}BucketWebsiteUrl`,
     });
   }
 }
@@ -52,7 +57,7 @@ export class S3HostBuildFolderRootStack extends cdk.Stack {
     super(scope, id, props);
     const stack = new S3HostBuildFolderNestedStack(
       this,
-      `S3HostBuildFolderStack`,
+      `${props.uniqueId}S3HostBuildFolderStack`,
       props,
     );
 

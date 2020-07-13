@@ -1,5 +1,5 @@
 {
-  "name": "@cdk-recipes/s3-host-build-folder",
+  "name": "@cdk-recipes/github-amplify",
   "version": "0.2.1",
   "scripts": {
     "build": "tsc",
@@ -14,9 +14,8 @@
     "typescript": "~3.7.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-s3": "*",
     "@aws-cdk/core": "*",
-    "@aws-cdk/aws-s3-deployment": "*",
+    "@aws-cdk/aws-amplify": "*",
     "source-map-support": "^0.5.16"
   },
   "publishConfig": {

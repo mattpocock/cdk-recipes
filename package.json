@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "s3": "yarn workspace @cdk-recipes/s3-host-build-folder"
+    "s3": "yarn workspace @cdk-recipes/s3-host-build-folder",
+    "ga": "yarn workspace @cdk-recipes/github-amplify"
   },
   "dependencies": {
     "@changesets/cli": "^2.9.2"
